@@ -8,6 +8,12 @@
         margin-top: 10px;
     }
 
+    .slide-imgs .columns {
+            display: block !important; /*Permet de n'afficher qu'une seule image sur les smartphones*/
+
+    }
+
+
     #desktop {
         display: none;
     }
@@ -66,5 +72,6 @@
 
     .slide-imgs {
         padding-bottom: 20px;
+        display : grid; /* Allows the display of the images according to the screen width : 1 for mobiles, 3 for desktop for instance*/
     }
 }

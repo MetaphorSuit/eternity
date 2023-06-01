@@ -1,12 +1,12 @@
 .title {
-    color: var(--white);
+    color: var(--dark);
     font-size: xx-large;
 }
 
 /* WELCOME */
 
 .welcome {
-    /* background-image: url("/background.jpeg"); It was moved to inline css. */
+    /* background-image: url("/images/portrait (1 sur 18).jpg"); */
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -18,9 +18,18 @@
     align-items: center !important;
 }
 
-.welcome-title {
+/* Math The printer, en gros, sur la frontpage */
+.welcome-title {  
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    font-weight: 300 !important;
     text-align: center;
     font-size: 2em;
+    margin-top: 0.5rem;
+}
+.welcome-title:hover {  
+    color: var(--dark);
+    
 }
 
 .welcome-subtitle {
@@ -84,7 +93,7 @@
 }
 
 nav.navbar {
-    background-color: var(--dark);
+    background-color: var(--bone);
     justify-content: people-between;
     align-items: center;
     height: unset !important;
@@ -94,12 +103,14 @@ nav.navbar {
 }
 
 .navbar-burger {
-    color: #ffffff;
+    color: var(--main);
     height: 6rem;
 }
 
 .menu {
     max-width: 600px;
+    padding: 0 1.45rem 0 1.45rem;
+    text-align: center;
 }
 
 .margin-bottom-50 {
@@ -172,7 +183,8 @@ a img {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.92);
+    background-color: var(--bonefaded); 
+    backdrop-filter: blur(5px);
 }
 
 .slide {
@@ -191,12 +203,13 @@ a img {
 }
 
 .navigate {
-    position: fixed;
+    position: relative; /*Est ce que je veux que les flèches apparaissent directement, ou bien en bas de la page? Je pense que j'ai envie que les gens prennent le temps de regarder les détails, donc en bas de la page pour l'instant, avec un position : relative. Sinon on peut essayer le sticky (qui colle au nav) ou bien un fixed/absolute, qui reste sur place */
     bottom: 25px;
-    right: 100px;
-    background-color: rgba(0, 0, 0, 0.75);
-    border-radius: 10%;
-    padding: 20px;
+    right: auto;
+    /* background-color: var(--bonefaded2);
+    backdrop-filter: blur(5px);
+    border-radius: 7%; */
+    padding: 15px;
     display: flex;
     justify-content: space-around;
     height: 100px;
@@ -206,7 +219,7 @@ a img {
 .prev,
 .next {
     cursor: pointer;
-    color: var(--main-light);
+    color: var(--main);
     font-weight: bold;
     font-size: 36px;
     transition: 0.6s ease;
@@ -234,6 +247,7 @@ a img {
     display: grid;
     justify-content: center;
     align-items: center;
+    padding: .75rem;
 }
 
 .fullheight {
@@ -284,6 +298,8 @@ section .column img {
     margin-bottom: 30px;
     margin-left: 20px;
     font-size: medium;
+    font-weight: 200;
+    text-align: justify;
     width: 800px;
 }
 
@@ -309,25 +325,24 @@ section .column img {
 }
 
 .center {
-    display: flex;
+    display: flex; /*Si enlevé, fait en sorte de n'afficher qu'une image à la fois sur smartphone*/ 
     justify-content: center;
     align-items: center;
 }
 
 .exif {
+    display: none;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: small;
-    color: rgb(211, 211, 211);
 }
 
 .footer {
-    background-color: var(--dark);
-    color: rgb(245, 245, 245);
+    background-color: var(--white);
 }
 
 .source-love {
-    color: var(--main-light);
+    color: var(--main);
 }
 
 #mobile {
@@ -336,6 +351,7 @@ section .column img {
 
 .image-box {
     margin-top: 20px;
+    margin-bottom : 20px;
     overflow: hidden;
     border: 0px;
 }
@@ -352,11 +368,12 @@ section .column img {
 }
 
 .slide-imgs .columns {
-    margin: unset;
+    margin: 0.1;
 }
 
 .slide-imgs .columns .column {
-    padding: 0.10rem;
+    padding: 0.75rem;
+    
 }
 
 .slide-imgs .columns .column:not(:first-child) {
@@ -391,6 +408,11 @@ section .column img {
     transition: opacity 250ms ease-in-out;
 }
 
+div.center.hidden-menu { 
+    display: none; /*Permet d'effacer le #tag en début de page, quand on arrive dessus*/
+
+}
+
 @keyframes jumpInfinite {
     0% {
         margin-top: 0;
@@ -404,3 +426,5 @@ section .column img {
         margin-top: 0;
     }
 }
+
+

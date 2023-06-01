@@ -1,12 +1,16 @@
 html {
     height: 100%;
-    background-color: var(--dark);
+    background-color: var(--bone);
+font-style : "Ysabeau thin", serif;
+font-weight: 100 !important;
 }
 
 body {
     min-height: 100%;
     font-size: large;
-    color: var(--white);
+    color: var(--dark);
+    
+    
 }
 
 html::-webkit-scrollbar {
@@ -24,14 +28,13 @@ h3,
 h4,
 h5,
 h6 {
-    color: #eee !important;
     font-weight: 500;
     line-height: 1.3em;
     margin: 30px 0 20px 0;
 }
 
 h1 {
-    font-size: 2.75rem;
+    font-size: 3.75rem;
 }
 
 h2 {
@@ -66,20 +69,23 @@ header {
 
 a {
     margin-bottom: 2px;
-    color: var(--white);
+    color: var(--dark);
     text-decoration: none;
     word-break: break-word;
 }
 
 a:hover,
 a.active {
-    color: var(--white);
+    color: var(--main-light);
 }
 
 a:hover,
 a.active {
-    border-bottom: 5px solid var(--main);
-}
+    /* text-decoration: underline;
+    text-decoration-thickness: 25px;
+    text-decoration-color : var(--greyfaded);
+    text-underline-offset: -20px; */
+ }
 
 .a-clean:hover,
 a-clean.active {
@@ -87,13 +93,12 @@ a-clean.active {
 }
 
 ::-moz-selection {
-    background: var(--main);
+    /* background: var(--bone); */
     text-shadow: none;
-    color: #fff;
 }
 
 ::selection {
-    background: var(--main);
+    /* background: var(--main); Déactivé, car créait un artefact de sélection vert sur le titre H1 du site*/
     text-shadow: none;
-    color: #fff;
+
 }
